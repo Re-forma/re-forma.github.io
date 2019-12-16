@@ -1,0 +1,30 @@
+= Сайт ассоциации Ре:форма
+:source-highlighter:  rouge
+
+Сайт использует генератор link:https://jekyllrb.com/[*Jekyll*] с темой link:https://github.com/jekyll/minima/tree/v2.5.1[*minima*]. 
+
+Разработка ведётся в ветке *develop*. Релизы лежат в ветке *master*.
+
+== Как разрабатывать
+
+В копии репозитория на ветке *develop* выполните:
+
+[source,shell]
+bundle exec jekyll serve
+
+Откройте в браузере http://localhost:4000
+
+== Как собрать и выложить релиз
+
+Пока в список плагинов link:https://pages.github.com/versions/[*GitHub Pages*] не добавят link:https://github.com/asciidoctor/jekyll-asciidoc[*jekyll-asciidoc*], потребуются две копии репозитория. Одна должна стоять на ветке *develop*, другая на *master*.
+
+В *develop* копии выполните:
+
+[source,shell]
+JEKYLL_ENV=production bundle exec jekyll build
+
+Замените содержимое *master* копии на результат сборки из *develop/_site*.
+
+== Лицензия
+
+Creative Commons "С указанием авторства-Некоммерческая-С сохранением условий версии 4.0 Международная" link:https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.ru[*CC BY-NC-SA 4.0*]
